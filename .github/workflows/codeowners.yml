@@ -1,13 +1,14 @@
 name: Sync CODEOWNERS
 
-on:
-  pull_request:
-    branches: [ "master" ]
-    paths:
-      - "**/OWNERS"
-      - ".github/CODEOWNERS"
-      - ".github/workflows/codeowners.yml"
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     branches: [ "master" ]
+#     paths:
+#       - "**/OWNERS"
+#       - ".github/CODEOWNERS"
+#       - ".github/workflows/codeowners.yml"
+# 
 permissions:
   contents: write
 

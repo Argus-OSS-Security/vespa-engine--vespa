@@ -1,18 +1,19 @@
 name: Delete old Cloudsmith artifacts
 
-on:
-  workflow_dispatch:
-
-  pull_request:
-    paths:
-      - .github/workflows/delete-old-versions-in-archive.yml
-      - .github/scripts/delete-old-cloudsmith-artifacts.sh
-    branches:
-      - master
-
-  schedule:
-   - cron: '0 6 * * *'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+# 
+#   pull_request:
+#     paths:
+#       - .github/workflows/delete-old-versions-in-archive.yml
+#       - .github/scripts/delete-old-cloudsmith-artifacts.sh
+#     branches:
+#       - master
+# 
+#   schedule:
+#    - cron: '0 6 * * *'
+# 
 permissions:
   contents: read
 

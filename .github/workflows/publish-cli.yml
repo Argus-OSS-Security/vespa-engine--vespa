@@ -1,27 +1,28 @@
 name: Vespa CLI - Build and Publish
 
-on:
-  push:
-    tags:
-      - v*
-  pull_request:
-    branches:
-      - master
-    paths:
-      - .github/workflows/publish-cli.yml
-      - client/go/**
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'The version to build and publish, it MUST be a tag in this repository without the "v" prefix.'
-        required: true
-        type: string
-      force-homebrew-publish:
-        description: 'This forces the attempt of publishing the update on the homebrew-core repo'
-        required: false
-        type: bool
-        default: false
-        
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     tags:
+#       - v*
+#   pull_request:
+#     branches:
+#       - master
+#     paths:
+#       - .github/workflows/publish-cli.yml
+#       - client/go/**
+#   workflow_dispatch:
+#     inputs:
+#       version:
+#         description: 'The version to build and publish, it MUST be a tag in this repository without the "v" prefix.'
+#         required: true
+#         type: string
+#       force-homebrew-publish:
+#         description: 'This forces the attempt of publishing the update on the homebrew-core repo'
+#         required: false
+#         type: bool
+#         default: false
+#         
 defaults:
   run:
     # Specify to ensure "pipefail and errexit" are set.

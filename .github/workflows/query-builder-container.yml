@@ -1,16 +1,17 @@
 name: Build "Query Builder" Container
 
-on:
-  push:
-    tags:
-      - v*
-  pull_request:
-    branches:
-      - master
-    paths:
-      - .github/workflows/query-builder-container.yml
-      - client/js/app/**
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     tags:
+#       - v*
+#   pull_request:
+#     branches:
+#       - master
+#     paths:
+#       - .github/workflows/query-builder-container.yml
+#       - client/js/app/**
+# 
 defaults:
   run:
     # Specify to ensure "pipefail and errexit" are set.

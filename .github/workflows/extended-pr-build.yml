@@ -34,10 +34,11 @@
 
 name: Extended PR Build
 
-on:
-  pull_request_target:
-    types: [opened, synchronize, reopened]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request_target:
+#     types: [opened, synchronize, reopened]
+# 
 concurrency:
   group: extended-build-${{ github.event.pull_request.number }}
   cancel-in-progress: true

@@ -1,22 +1,23 @@
 name: Run BATS Tests
 
-on:
-  workflow_dispatch: # Allows manual triggering of the workflow
-  push:
-    branches:
-      - main
-      - master
-    paths:
-      - '**/*.sh'
-      - '**/*.bats'
-  pull_request:
-    branches:
-      - main
-      - master
-    paths:
-      - '**/*.sh'
-      - '**/*.bats'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch: # Allows manual triggering of the workflow
+#   push:
+#     branches:
+#       - main
+#       - master
+#     paths:
+#       - '**/*.sh'
+#       - '**/*.bats'
+#   pull_request:
+#     branches:
+#       - main
+#       - master
+#     paths:
+#       - '**/*.sh'
+#       - '**/*.bats'
+# 
 permissions:
   contents: read
 

@@ -1,16 +1,17 @@
 name: Update Third-Party Attributions
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 3 * * *" # nightly 03:00 UTC
-  pull_request:
-    branches: [master]
-    paths:
-      - .github/workflows/attribution.yml
-      - .github/scripts/build-attribution.sh
-      - ATTRIBUTIONS.md
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#   schedule:
+#     - cron: "0 3 * * *" # nightly 03:00 UTC
+#   pull_request:
+#     branches: [master]
+#     paths:
+#       - .github/workflows/attribution.yml
+#       - .github/scripts/build-attribution.sh
+#       - ATTRIBUTIONS.md
+# 
 permissions:
   contents: write
   pull-requests: write

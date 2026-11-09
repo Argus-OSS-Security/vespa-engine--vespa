@@ -4,18 +4,19 @@ name: Vespa TextMate grammars
 # CongoCC grammars and token configuration. Fail when a checked-in grammar no longer matches
 # what its generator produces, so that parser changes and the grammars are updated together.
 
-on:
-  workflow_dispatch:
-  pull_request:
-    paths:
-      - 'integration/tmgrammar/**'
-      - 'integration/schema-language-server/language-server/src/main/ccc/**'
-      - 'integration/schema-language-server/language-server/src/main/java/ai/vespa/schemals/lsp/schema/semantictokens/**'
-      - 'integration/schema-language-server/language-server/src/main/java/ai/vespa/schemals/lsp/yqlplus/semantictokens/**'
-      - 'integration/schema-language-server/language-server/src/main/java/ai/vespa/schemals/schemadocument/resolvers/RankExpression/BuiltInFunctions.java'
-      - 'integration/schema-language-server/language-server/src/test/sdfiles/**'
-      - '.github/workflows/tmgrammar.yml'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#   pull_request:
+#     paths:
+#       - 'integration/tmgrammar/**'
+#       - 'integration/schema-language-server/language-server/src/main/ccc/**'
+#       - 'integration/schema-language-server/language-server/src/main/java/ai/vespa/schemals/lsp/schema/semantictokens/**'
+#       - 'integration/schema-language-server/language-server/src/main/java/ai/vespa/schemals/lsp/yqlplus/semantictokens/**'
+#       - 'integration/schema-language-server/language-server/src/main/java/ai/vespa/schemals/schemadocument/resolvers/RankExpression/BuiltInFunctions.java'
+#       - 'integration/schema-language-server/language-server/src/test/sdfiles/**'
+#       - '.github/workflows/tmgrammar.yml'
+# 
 permissions:
   contents: read
 

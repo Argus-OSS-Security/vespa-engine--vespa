@@ -1,32 +1,33 @@
 name: Vespa Schema LSP - Deploy extension
 
-on:
-  workflow_dispatch:
-    inputs:
-      version:
-        type: choice
-        description: Which kind of release is this ('current' reuses the latest release version without bumping)
-        required: true
-        default: patch
-        options:
-          - patch
-          - minor
-          - major
-          - current
-      targets:
-        type: choice
-        description: Which client(s) to publish
-        required: true
-        default: all
-        options:
-          - all
-          - vscode
-          - intellij
-  pull_request:
-    paths:
-      - 'integration/schema-language-server/**'
-      - '.github/workflows/lspDeploy.yml'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       version:
+#         type: choice
+#         description: Which kind of release is this ('current' reuses the latest release version without bumping)
+#         required: true
+#         default: patch
+#         options:
+#           - patch
+#           - minor
+#           - major
+#           - current
+#       targets:
+#         type: choice
+#         description: Which client(s) to publish
+#         required: true
+#         default: all
+#         options:
+#           - all
+#           - vscode
+#           - intellij
+#   pull_request:
+#     paths:
+#       - 'integration/schema-language-server/**'
+#       - '.github/workflows/lspDeploy.yml'
+# 
 jobs:
   lspBuildAndDeploy:
     name: Vespa Schema LSP Build and Deploy
